@@ -1,0 +1,11 @@
+squash commit là dùng để gộp nhiều commit thành 1 commit cho git history được gọn gàng hơn
+Đặt vấn đề: Khi phát triển 1 feature mới (ví dụ featureA) được tách nhánh từ master ra. Trên featureA transformtoReduxtoolkit
+phải commit rất nhiều lần (như savecode, fix giao diện....), những commit đó mà ta không squash thành 1 commit 
+thì khi chúng được merge vào master sẽ rất rối master. Vậy nên ta thực hiện các bước squash như sau
+
+1. Trên featureA ta gõ lệnh git rebase -i HEAD~N (với N là số commit cần merge)
+2. Khi màn hình xuất hiện các commit đó, sửa chữ pick của commit đầu tiên thành r (reword - cho phép đổi message commit), các commit 
+còn lại ta sủa pick thành s(squash) hoặc f(fixup) tùy ý
+3. ta save nó lại xong rồi nó sẽ hiện lên 1 màn hình cho phép ta sửa commit message, ta có thể sửa tùy ý và lưu lại
+4. Bây giờ kiểm tra git log --oneline, các commit đã được squash
+5. Bước cuối cùng là ta merge nhánh featureA vào master thôi
