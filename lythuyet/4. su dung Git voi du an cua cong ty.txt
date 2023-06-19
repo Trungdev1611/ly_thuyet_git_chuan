@@ -1,0 +1,5 @@
+1. vi la du an cua cong ty nen minh không phải chủ của repo. Mình phải thực hiện theo các bước sau
+
+a/ Fork dự án đó
+b/ Clone dự án đã fork về máy local của mình
+c/ cd vao du an vua clone ve

@@ -1,0 +1,13 @@
+Khi lỡ git add . tất cả các file thay đổi (chưa commit - ví dụ chưa đưa file node_modules vào git ignore mà đã gõ git add .) bây giờ ta muốn bỏ 1 file hoặc node_modules khỏi stageChange ta sẽ sử dụng git reset HEAD <tên file> 
+
+ví dụ: git reset HEAD node_modules
+
+sau đó xóa sự theo dõi của git với file hoặc node_modules với lệnh git rm -r --cached node_modules
+
+
+**Lưu ý việc sử dụng tên file có thể gây nhầm lần vì nếu có nhiều tên file giống nhau với đường dẫn khác nhau, để tránh nhầm lẫn ta có thể sử dụng đường dẫn tới file
+
+**Nếu như là lần đầu chưa có commit nào thì không sử dụng được git reset HEAD node_modules thay vào đó chỉ sử dụng git reset
+
+
+tiếp tục commit và push bình thường

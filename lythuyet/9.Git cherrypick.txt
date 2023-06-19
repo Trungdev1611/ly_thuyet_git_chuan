@@ -1,0 +1,12 @@
+1. Về lý thuyết git cherrypick dùng để pick 1 commit từ 1 nhánh này sang 1 nhánh khác
+
+giả sử ta có nhánh master gồm các commit: a - b -c -d
+nhánh feature1 có các commit: d - e - f
+
+bây giờ ta chỉ muốn code từ commit e vào nhánh master thôi thì ta sẽ thực hiện lần lượt như sau
+
+a/ đứng ở branch feature1: git log --oneline để lấy commit_hash của commit e
+b/ checkout sang master: git checkout master
+c/ đang ở master gõ lệnh git cherrypick commit_hash_của_commit_e
+
+Sau khi thực hiện xong trên nhánh master sẽ có các commit như sau: a -b -c -d -e

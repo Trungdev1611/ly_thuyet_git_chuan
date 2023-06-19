@@ -1,0 +1,1 @@
+1. Khi copy một file chứa git ở local thì nó cũng giống như việc clone, file mới vẫn có liên kết với remote. khi chỉnh sửa ở file mới mà push lên remote thì ở file cũ ta git pull về vẫn nhận được

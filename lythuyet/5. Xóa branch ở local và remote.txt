@@ -1,0 +1,2 @@
+1. Để xóa branch ở local: git branch -d branch_name
+2. Để xóa cũng branch đó nhưng ở trên remote: git push origin --delete branch_name

@@ -1,0 +1,15 @@
+1. Đã test thành công
+
+Tình huống: Khi bạn đang làm ở featureA nhưng bạn nhảy sang nhánh khác để hotfix, khi đó b phải commit để khỏi mất code (commit rác), sau đó b quay lại nhánh A code tiếp, đang code dở nhưng lại phải sang C hot fix thì lại phải commit ở nhánh A tiếp tục (commit-rác) 1 lần nữa. Làm nhiều lần như vậy sẽ dẫn đến có nhiều commit rác. Vậy để tránh điều đó ta sẽ gộp các commit rác đó thành 1 rồi đẩy, các bước thực hiện như sau:
+
+Giả sử khi gõ git log--oneline ta có
+
+commit3(rác)
+commit2(rác)
+commit1(rác)
+......
+
+
+a/ ta muốn gộp 3 commit trên thành 1 commit ta sẽ gõ: git rebase -i HEAD~3   //với 3 là số commit cần gộp
+
+b/ sẽ hiện file notepad để chỉnh sửa (hoặc nếu là terminal sẽ nhấn nút i để sửa), có 3 dòng pick ta sẽ để dòng đầu tiên là pick, còn sửa các  dòng sau là s rrooif lưu lại (terminal Nhấn Esc -> :qw -> Enterđể thực hiện lưu sửa đổi), sau đó sẽ dc chuyển sang màn notepad hoặc terminal ms, ở màn đó ta sẽ sửa commit đầu và comment commit sau (với dấu # ở đầu) và nhấn lưu lại, sau đó nhấn git log --oneline để xem kết quả. Đến lúc này ta đã merge các commit ở local, nếu muốn áp dụng với commit ở remote ta sẽ thêm lệnh git push --force. OK

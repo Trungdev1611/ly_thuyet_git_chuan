@@ -1,0 +1,2 @@
+1.git commit –amend: de ghi de lai commit
+2 Git push -force de ghi de code da push ma khong tao ra commit moi

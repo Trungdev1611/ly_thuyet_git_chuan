@@ -1,0 +1,1 @@
+fork project về git của mình =>clone về local >modify code >push code lên remote của mình > create pull request sang remote của công ty > công ty xem ok merge pullrequest => pull code mới nhất từ repo brach main của công ty về
