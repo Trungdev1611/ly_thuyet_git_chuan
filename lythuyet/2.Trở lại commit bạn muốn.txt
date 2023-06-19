@@ -1,0 +1,5 @@
+1. gõ gitlog để xem lịch sử commit
+2. copy id của commit
+3. nhấn q để thoát git log
+4. gõ git reset --hard idcommit
+5. Lúc này commit đã bị xóa ở dưới local nhưng trên remote commit vẫn chưa bị xóa. Khi đó ta phải gõ git push --force ==>OK
